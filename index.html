@@ -1,442 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSSNEKA</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://i.ibb.co.com/B5Zwc38m/1000061688-removebg-preview.png" type="image/x-icon">
-<style>
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: url('URL_IMAGE') no-repeat center center fixed; 
-    background-size: cover;
-    position: relative;
-}
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: opacity(0.5);
-    z-index: -1; 
-}
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-}
-.box {
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e0e0e0;
-    box-sizing: border-box;
-    background-size: cover;
-    background-position: center;
-    animation: fadeIn 5s forwards;
-}
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman Dalam Perbaikan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
     }
-}
-.fade-in-text {
-    font-size: 2em;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
-}
-.animated-box {
-    width: 100px;
-    height: 100px;
-    transition: all 0.3s ease-in-out;
-}
-@media (min-width: 600px) {
-    .box {
-        width: calc(50% - 10px);
-        margin: 5px;
+
+    .container {
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
     }
-}
-@keyframes moveUpBlur {
-    0% {
-        top: 0;
-        filter: blur(0px);
+
+    .logo {
+      max-width: 250px;
+      margin-bottom: 20px;
     }
-    100% {
-        top: -100px;
-        filter: blur(5px);
+
+    h1 {
+      color: #ff6b6b;
+      margin-bottom: 10px;
     }
-}
-@media (min-width: 900px) {
-    .box {
-        width: calc(33.33% - 10px);
-        margin: 5px;
+
+    p {
+      font-size: 1.1em;
+      color: #333;
     }
-}
-header, footer {
-    text-align: center;
-    padding: 10px;
-    background-color: blue;
-    color: white;
-}
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-.social-links img:hover {
-    transform: scale(1.2);
-}
-.header {
-    position: relative;
-    text-align: center;
-    background-color: blue;
-    padding: 20px;
-    color: white;
-    border-radius: 10px;
-}
-.menu {
-    width: 0;
-    height: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(17, 17, 17, 0.8); 
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-.menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-.menu a:hover {
-    color: #f1f1f1;
-}
-.menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-.menu-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-.menu-btn:hover {
-    transform: scale(1.1);
-}
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-</style>
+
+    .clock-box {
+      margin-top: 20px;
+      background-color: #222;
+      color: #0f0;
+      padding: 15px 30px;
+      font-size: 2em;
+      font-family: 'Courier New', monospace;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    }
+  </style>
 </head>
 <body>
-    <header class="fade-in-text header">
-        <img src="https://i.ibb.co.com/B5Zwc38m/1000061688-removebg-preview.png" style="position: absolute; top: 10px; left: 10px; width: 50px; height: 50px;">
-        <h6 style="margin: 0;">OSSNEKA</h6>
-        <h6 style="margin: 5px 0;">(OSIS SMK Negeri 4 KLATEN)</h6>
-        <h6 style="margin: 5px 0;">Organisasi Siswa Intra Sekolah</h6>
-        <h6 style="margin: 5px 0;">SMK Negeri 4 KLATEN</h6>
-        <img src="https://i.ibb.co.com/9myGZQD4/Whats-App-Image-2024-11-15-at-15-52-03-a4e45878-removebg-preview.png" style="position: absolute; top: 10px; right: 10px; width: 50px; height: 50px;">
-        <button class="menu-btn" onclick="openNav()">☰</button>
-    </header>
+  <div class="container">
+    <img src="https://i.ibb.co.com/B5Zwc38m/1000061688-removebg-preview.png" alt="Logo" class="logo" />
+    <h1>Halaman Sedang Dalam Perbaikan</h1>
+    <p>Mohon tunggu, admin sedang memperbaiki halaman ini.</p>
+    <div class="clock-box" id="clock">00:00:00</div>
+  </div>
 
-    <div id="mySidenav" class="menu">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="https://anonymous-1-id.github.io/ossneka">BERANDA</a>
-        <a href="https://anonymous-1-id.github.io/anggota">ANGGOTA</a>
-        <a href="https://anonymous-1-id.github.io/progja">PROGJA</a>
-        <a href="https://anonymous-1-id.github.io/pembina">PEMBINA</a>
-    </div>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+      const indonesiaTime = new Date(utc + (3600000 * 7)); // GMT+7
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
+      const hours = indonesiaTime.getHours().toString().padStart(2, '0');
+      const minutes = indonesiaTime.getMinutes().toString().padStart(2, '0');
+      const seconds = indonesiaTime.getSeconds().toString().padStart(2, '0');
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-        }
-    </script>
-</body>
-</html>
-    <div class="container fade-in-text">
-        <!-- Pengurus Inti -->
-        <div class="box" id="inti" style="position: relative; background-image: url('https://i.ibb.co.com/BHztrFYS/6219549052396225861-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Ketua OSIS :
-                </li>
-                <ul>
-                  Nadya Shelby Rahmawati
-                </ul>
-                <li>
-                  Wakil Ketua :
-                </li>
-                <ul>
-                  Muhammad Adjie Pamungkas
-                </ul>
-                <ul>
-                    Alka Imanuela Wilujeng Istana
-                </ul>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("inti").onclick = function() {
-                window.location.href = "https://anonymous-1-id.github.io/inti";
-            };
-        </script>        
-        <div class="box" id="sekre" style="position: relative; background-image: url('https://i.ibb.co.com/PscHzwkV/6219549052396225864-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seketaris :
-                </li>
-                <ol>
-                    <li>Djana Junada Mukti</li>
-                    <li>M.M Dhita Anggraeni</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("sekre").onclick = function() {
-                window.location.href = "https://anonymous-1-id.github.io/sekretaris";
-            };
-        </script>
-        
-        <div class="box" id="bendahara" style="position: relative; background-image: url('https://i.ibb.co.com/wvRBggL/6219549052396225862-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Bendahara :
-                </li>
-                <ol>
-                    <li>Nurhikmah Dwi Rahmawati</li>
-                    <li>Demetria Zarathustra</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("bendahara").onclick = function() {
-                window.location.href ="https://anonymous-1-id.github.io/bendahara"
-            }
-        </script>
-        <!-- Seksi Bidang 1 -->
-        <div class="box" id="sekbid1" style="position: relative; background-image: url('https://i.ibb.co.com/PzrkFt6n/6219549052396225860-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seksi Bidang Keimanan,  Akhlak Mulia dan Ketakwaan :
-                </li>
-                <ol>
-                    <li>Naisilla Ariska Ramadhani (koordinator)</li>
-                    <li>Afifah Mahanani</li>
-                    <li>Fadilla Putri Wibowo</li>
-                    <li>Karisa Ardelia</li>
-                    <li>Hilmiya Indira Hanun</li>
-                    <li>Elisa Dwi Nurjanah</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("sekbid1").onclick = function() {
-                window.location.href ="https://anonymous-1-id.github.io/sekbidone"
-            }
-        </script>
-        <!-- Seksi Bidang 2 -->
-        <div class="box" id="sekbid2" style="position: relative; background-image: url('https://i.ibb.co.com/JwygzL2Z/6219549052396225858-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seksi Bidang Kepribadian Unggul, Wawasan Kebangsaan, dan Bela Negara :
-                </li>
-                <ol>
-                    <li>Kayla Anastasya Putri Utomo (koordinator)</li>
-                    <li>Kana Ma'rufah</li>
-                    <li>Diah Sulistyowati</li>
-                    <li>Rike Diah Pitaloka</li>
-                    <li>Alifiyana Griselda</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("sekbid2").onclick = function() {
-                window.location.href ="https://anonymous-1-id.github.io/sekbid2"
-            }
-        </script>
-        <!-- Seksi Bidang 3 -->
-        <div class="box" id="sekbid3" style="position: relative; background-image: url('https://i.ibb.co.com/3VYK5Vh/6219549052396225859-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seksi Bidang Prestasi Akademik, Seni, dan Olahraga :
-                </li>
-                <ol>
-                    <li>Ripna Safitri (koordinator)</li>
-                    <li>Renjiro Dafa Arta Yoga</li>
-                    <li>Adynda Nur Aisyah</li>
-                    <li>Adinda Rizka Putri</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("sekbid3").onclick = function() {
-                window.location.href ="https://anonymous-1-id.github.io/sekbid3"
-            }
-        </script>
-        <!-- Seksi Bidang 4 -->
-        <div class="box" id="sekbid4" style="position: relative; background-image: url('https://i.ibb.co.com/qYMdCT7c/6219549052396225857-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seksi Bidang Demokrasi, HAM, Pendidikan Politik, Lingkungan Hidup, Kepekaan, dan Toleransi Sosial :
-                </li>
-                <ol>
-                    <li>Yezya Renata Dewi (koordinator)</li>
-                    <li>Angga Dwi Afrianto</li>
-                    <li>Siffa Salsa Billa</li>
-                    <li>Eka Nur Yuliana</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("sekbid4").onclick = function() {
-                window.location.href ="https://anonymous-1-id.github.io/sekbid4"
-            }
-        </script>
-        <!-- Seksi Bidang 5 -->
-        <div class="box" id="sekbid5" style="position: relative; background-image: url('https://i.ibb.co.com/vv3pVz6Z/6219549052396225867-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-              <li>Seksi Bidang Kreativitas, Keterampilan, dan Kewirausahaan :</li>
-              <ol>
-                  <li>Pepri Prastika Iswandari (koordinator)</li>
-                  <li>Monita Juniati</li>
-                  <li>Vient Asmarani</li>
-                  <li>Ilham Dwi Crisna Wardana Salim</li>
-                  <li>Aulia Elfira Wardani</li>
-                  <li>Najwa Aninda Fisqi</li>
-              </ol>
-          </h6>
-      </div>
-      <script>
-        document.getElementById("sekbid5").onclick = function() {
-            window.location.href ="https://anonymous-1-id.github.io/sekbid5"
-        }
-      </script>
-        <!-- Seksi Bidang 6 -->
-        <div class="box" id="sekbid6" style="position: relative; background-image: url('https://i.ibb.co.com/60GVB0mL/6219549052396225866-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seksi Bidang Kualitas Jasmani, Kesehatan, dan Gizi :
-                </li>
-                <ol>
-                    <li>Hanif Khoirunnisa (koordinator)</li>
-                    <li>Tiara</li>
-                    <li>Sholeh Dwi Aditya</li>
-                    <li>Putra Dian Auliya</li>
-                    <li>Tsaniya Nuri Lathifa</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("sekbid6").onclick = function() {
-                window.location.href ="https://anonymous-1-id.github.io/sekid6"
-            }
-        </script>
-        <!-- Seksi Bidang 7 -->
-        <div class="box" id="sekbid7" style="position: relative; background-image: url('https://i.ibb.co.com/7x7hSKGx/6219549052396225863-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seksi Bidang Sastra, Budaya dan Bahasa :
-                </li>
-                <ol>
-                    <li>Revita Putri Puspawardani (koordinator)</li>
-                    <li>Alka Imanuela Wilujeng Istana</li>
-                    <li>Donnalyana Nur Nashya</li>
-                    <li>Lifiana Zulfa Azmanizar</li>
-                    <li>Natalia Ruthy York</li>
-                </ol>
-            </h6>
-        </div>
-        <script>
-            document.getElementById("sekbid7").onclick = function() {
-                window.location.href ="https://anonymous-1-id.github.io/sekbid7"
-            }
-        </script>
-        <!-- Seksi Bidang 8 -->
-        <div class="box" id="sekbid8" style="position: relative; background-image: url('https://i.ibb.co.com/Cpzq35Vh/6219549052396225865-120.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
-          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
-          <h6 style="position: relative; font-weight: bold; color: white; padding: 10px; z-index: 2;">
-                <li>
-                    Seksi Bidang Teknologi Informasi dan Komunikasi :
-                </li>
-                <ol>
-                    <li>Zalfaa Zainum Mutaqin (koordinator)</li>
-                    <li>Keysa Salsabila Khalisa Putri</li>
-                    <li>Yoga Adityatama</li>
-                    <li>Ega Manggala Syahputra</li>
-                    <li>Indri Putri Lestari</li>
-                    <li>Dwi Putra Wibowo</li>
-                </ol>
-            </h6>
-        </div>
-        </div>
-    </div>
-    <script>
-        document.getElementById("sekbid8").onclick = function() {
-            window.location.href ="https://anonymous-1-id.github.io/sekbid8"
-        }
-    </script>
-    <!--footer!-->
-    <footer style="background-color:blue">
-      <div class="social-links">
-        <a href="https://www.tiktok.com/@ossneka_" target="_blank">
-            <img src="https://i.ibb.co.com/V0Ftwwvr/th-2-removebg-preview.png" alt="TikTok" width="40" height="40" style="margin-right: 20px;">
-        </a>
-        <a href="https://www.instagram.com/ossneka_" target="_blank">
-            <img src="https://i.ibb.co.com/ZpqR0tfg/ig.png" alt="Instagram" width="30" height="30" style="margin-right: 20px;">
-        </a>
-        <a href="https://www.youtube.com/@OSSNEKA" target="_blank">
-            <img src="https://i.ibb.co.com/Wp6tN19D/th-3-removebg-preview.png" alt="YouTube" width="50" height="50">
-        </a>
-    </div>
-</footer>
-    <footer>
-        OSSNEKA
-        2024/2025
-    </footer>
+      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
